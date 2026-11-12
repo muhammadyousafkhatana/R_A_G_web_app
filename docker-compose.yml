@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+    environment:
+      - USE_DEEPSEEK=false
+    # Uncomment to use DeepSeek API instead of local model
+    # environment:
+    #   - HF_TOKEN=your_token_here
+    #   - USE_DEEPSEEK=true
+    #   - DEEPSEEK_MODEL=deepseek-ai/DeepSeek-R1
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:8000

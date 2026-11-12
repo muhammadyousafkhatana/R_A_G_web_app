@@ -1,0 +1,7 @@
+[project]
+name = "rag-webapp-backend"
+description = "RAG Web App FastAPI Backend"
+requires-python = ">=3.10"
+
+[tool.uv]
+dev-dependencies = []

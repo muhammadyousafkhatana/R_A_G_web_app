@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+venv_d/
+env/
+.venv/
+
+# Data artifacts (generated at runtime — rebuilt on first boot)
+backend/data/rag.index
+backend/data/chunks.json
+backend/data/sources.json
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# HuggingFace cache
+.cache/
+huggingface/
+hf_cache/
